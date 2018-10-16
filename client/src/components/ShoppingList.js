@@ -30,7 +30,7 @@ class ShoppingList extends Component {
 								<ListGroupItem>
 								<button 
 									className="remove-btn"
-									style={{marginRight: '.5rem', color: 'white', backgroundColor: '#a31919', display: 'inline-block', border: 'none', height: '18px', width: '18px', cursor: 'pointer'}}
+									style={{marginRight: '.5rem', color: 'white', backgroundColor: '#a31919', display: 'inline-block', border: 'none', height: '36px', width: '32px', cursor: 'pointer'}}
 									
 									onClick={this.onDeleteClick.bind(this, _id)}
 
