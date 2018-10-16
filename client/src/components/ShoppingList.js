@@ -28,14 +28,13 @@ class ShoppingList extends Component {
 						{items.map(({ _id, name }) => (
 							<CSSTransition key={_id} timeout={500} classNames="fade">
 								<ListGroupItem>
-								<Button 
+								<button 
 									className="remove-btn"
-									style={{marginRight: '.5rem'}}
-									color="red"
-									size="sm"
+									style={{marginRight: '.5rem', backgroundColor: 'red', padding: '3px'}}
+									
 									onClick={this.onDeleteClick.bind(this, _id)}
 
-								> X </Button>
+								>&times;</button>
 								{name}
 								</ListGroupItem>
 
