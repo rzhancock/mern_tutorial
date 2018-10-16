@@ -7,8 +7,9 @@
     "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "client": "set PORT=3006 && npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "postbuild-heroku": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Robert Hancock",
   "license": "MIT",
@@ -17,7 +18,7 @@
     "concurrently": "^3.6.0",
     "create-react-app": "^1.5.2",
     "express": "^4.16.3",
-    "mongoose": "^5.1.7",
+    "mongoose": "^5.1.7"
   },
   "devDependencies": {
     "nodemon": "^1.17.5"
